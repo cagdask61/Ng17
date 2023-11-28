@@ -5,7 +5,7 @@ const APP_ROUTES: Routes = [
     { path: 'if', loadComponent: () => import('./components/if/if.component') },
     { path: 'for', loadComponent: () => import('./components/for/for.component') },
     { path: 'defer', loadComponent: () => import('./components/defer/defer.component') },
-    { path: 'examples', loadComponent: () => import('./components/examples/examples.component') },
+    { path: 'examples', loadChildren: () => import('./components/examples/examples.routes') },
 ];
 
 

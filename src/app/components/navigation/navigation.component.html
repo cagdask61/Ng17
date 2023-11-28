@@ -3,25 +3,11 @@
         <img class="h-11 w-11" src="../../../favicon.ico" alt="angular logo" height="44" width="44">
     </div>
     <div class="flex flex-row items-center justify-center gap-x-7">
-        <button routerLink="/if" routerLinkActive="bg-black text-white hover:bg-black/90"
+        @for (item of navigationLinks; track $index) {
+        <button [routerLink]="item.link" routerLinkActive="bg-black text-white hover:bg-black/90"
             class="outline outline-1 outlineblack/50 px-6 py-1 rounded hover:bg-black/5 font-medium">
-            If
+            {{item.text}}
         </button>
-        <!-- <button routerLink="/if" routerLinkActive="bg-black text-white hover:bg-black/90"
-            class="outline outline-1 outlineblack/50 px-6 py-1 rounded hover:bg-black/5 font-medium">
-            Switch
-        </button> -->
-        <button routerLink="/for" routerLinkActive="bg-black text-white hover:bg-black/90"
-            class="outline outline-1 outlineblack/50 px-6 py-1 rounded hover:bg-black/5 font-medium">
-            For
-        </button>
-        <button routerLink="/defer" routerLinkActive="bg-black text-white hover:bg-black/90"
-            class="outline outline-1 outlineblack/50 px-6 py-1 rounded hover:bg-black/5 font-medium">
-            Defer
-        </button>
-        <!-- <button routerLink="/if" routerLinkActive="bg-black text-white hover:bg-black/90"
-            class="outline outline-1 outlineblack/50 px-6 py-1 rounded hover:bg-black/5 font-medium">
-            FS
-        </button> -->
+        }
     </div>
 </nav>
